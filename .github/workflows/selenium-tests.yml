@@ -29,4 +29,4 @@ jobs:
 
       - name: Run Pytest (Headless Mode)
         run: |
-          py -m pytest tests/test_login_csv.py --html=reports/report.html --self-contained-html
+         python -m pytest tests/test_login_csv.py --html=reports/report.html --self-contained-html
