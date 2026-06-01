@@ -1,0 +1,9 @@
+username,password,email,expected,description
+azis_sukses,PasswordValid123!,azis@example.com,PASS,Registrasi valid
+azis_valid,,azis@example.com,FAIL,Password kosong
+,PasswordValid123!,azis@example.com,FAIL,Username kosong
+azis_valid,PasswordValid123!,,FAIL,Email kosong
+azis_salah,PasswordValid123!,email_ngawur,FAIL,Email tidak valid
+azis_pendek,123,pendek@example.com,FAIL,Password terlalu pendek
+azis_exist,PasswordValid123!,exist@example.com,FAIL,Username sudah dipakai
+azis_spasi,Password 123,space@example.com,FAIL,Password mengandung spasi
