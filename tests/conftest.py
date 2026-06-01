@@ -9,6 +9,11 @@ def driver():
     options = webdriver.ChromeOptions()
     options.add_argument('--start-maximized')
     options.add_argument('--disable-notifications')
+
+    # === TAMBAHKAN 2 BARIS INI AGAR BISA JALAN DI SERVER GITHUB LINUX ===
+    options.add_argument('--headless')  # Menjalankan Chrome tanpa jendela visual
+    options.add_argument('--no-sandbox')  # Syarat keamanan tambahan untuk server Linux
+    options.add_argument('--disable-dev-shm-usage') # Mencegah crash memori di server cloud
     
     # KUNCI PERBAIKAN: Kita langsung panggil webdriver.Chrome() polos tanpa Service atau ChromeDriverManager
     d = webdriver.Chrome(options=options)
